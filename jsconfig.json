@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "target": "ES6",
+    "baseUrl": "./",
+    "checkJs": true,
+    "jsx": "react"
+  },
+  "exclude": ["node_modules", "**/node_modules/*", "__tests__"]
+}

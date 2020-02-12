@@ -1,0 +1,7 @@
+export const NFC_SUPPORT = "NFC_SUPPORT";
+
+export const NFC_IS_ENABLED = "NFC_IS_ENABLED";
+
+export const NFC_SHOW_MESSAGE = "NFC_SHOW_MESSAGE";
+
+export const NFC_HIDE_MESSAGE = "NFC_HIDE_MESSAGE";

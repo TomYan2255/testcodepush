@@ -1,0 +1,71 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "bundle-android": "react-native bundle --platform android --entry-file App.js --bundle-output ./bundle/android/main.jsbundle  --assets-dest ./bundle/android --dev false",
+    "bundle-report": "node_modules/react-native-bundle-visualizer/src/react-native-bundle-visualizer.js --platform android --entry-file ./App.js --reset-cache"
+  },
+  "dependencies": {
+    "react": "16.8.6",
+    "react-native": "0.60.4",
+    "react-native-bundle-visualizer": "^2.0.4",
+    "react-native-code-push": "^6.0.0",
+    "react-native-extended-stylesheet": "^0.12.0",
+    "react-native-modal": "^11.4.0",
+    "react-native-nfc-manager": "git+https://github.com/kunmingLiu/react-native-nfc-manager.git#2.0.1",
+    "react-native-svg-uri": "^1.2.3",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4",
+    "redux-saga": "^1.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/runtime": "^7.5.5",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "babel-jest": "^24.8.0",
+    "eslint": "^6.1.0",
+    "jest": "^24.8.0",
+    "metro-react-native-babel-preset": "^0.55.0",
+    "react-test-renderer": "16.8.6",
+    "redux-devtools-extension": "^2.13.8"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.(jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.tsx?$": "ts-jest",
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-native|@react-native-community|react-native-cookies|cws-sdk|cwsble))"
+    ],
+    "verbose": true,
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "setupFiles": [
+      "<rootDir>/__mocks__/setup.js",
+      "<rootDir>/__mocks__/jestSetup.js",
+      "<rootDir>/__mocks__/mockSDK.js",
+      "<rootDir>/__mocks__/mockAsyncStorage.js"
+    ],
+    "testEnvironment": "jsdom",
+    "testPathIgnorePatterns": [
+      "<rootDir>[/\\\\](build|docs|node_modules)[/\\\\]",
+      "<rootDir>/__tests__/Controller/testData.js",
+      "<rootDir>/__tests__/Controller/epics/common/commonEpicTest.js"
+    ],
+    "globals": {
+      "window": true
+    }
+  }
+}
